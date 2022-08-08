@@ -11,21 +11,22 @@ An implementation of a (simple) schema validator written in Typescript using the
 
 
 
-Schema Types:
+### Schema Types:
 
+String Schema
     type StringSchema = {
       type: 'string';
       enum?: string[];
     }
-
+Number Schema
     type NumberSchema = {
         type: 'number'
     }
-
+Boolean Schema
     type BooleanSchema = {
         type: 'boolean'
     }
-    
+Object Schema    
     type ObjectSchema = {
         type: 'object';
         properties: Record<
@@ -34,7 +35,7 @@ Schema Types:
         >
         required?: string[]
     }
-    
+Array Schema    
     type ArraySchema = {
         type: 'array';
         items: StringSchema | NumberSchema | BooleanSchema | ObjectSchema | ArraySchema
